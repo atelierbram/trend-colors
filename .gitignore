@@ -58,6 +58,6 @@ typings/
 .env
 
 # output in docs folder, info in _underscore folder
-# _
+_
 
 .DS_Store
