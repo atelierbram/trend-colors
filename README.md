@@ -2,7 +2,7 @@
 
 Colors from Pantone’s biannual fashion color report converted into colorschemes - for designers to play with and customise.
 
-Create your own colorscheme from a decade of trend colors.
+[Create your own colorscheme](https://atelierbram.github.io/trend-colors/) from a decade of trend colors.
 
 ![Click on your favorite colors, pick your variables](https://i.imgur.com/tVhkCdF.gif)
 
