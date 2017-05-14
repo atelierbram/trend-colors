@@ -12,10 +12,6 @@
     <link rel="preload" href="{{ base_path }}assets/css/style.min.css" as="style" onload="this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="{{ base_path }}assets/css/style.min.css"></noscript>
 
-    {%- if page_type == "extendedColorscheme" -%}
-      <link rel="stylesheet" href="{{ base_path }}assets/css/extended-colorscheme.css">
-    {%- endif -%}
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% block head_scripts %}
       {% include "partials/feature-tests-script.njk" %}
@@ -53,19 +49,15 @@
     </div><!-- #page.page -->
 
       {% block footer_scripts %}
-      {% if page_type == "extendedColorscheme" %}
-        <script>{% include "partials/set-color-info-script.njk" %}</script>
-        <script>{% include "partials/extended-colorscheme-script.njk" %}</script>
-      {% endif %}
-      {% if page_type == "page" %}
-        <script>{% include "partials/modal-script.njk" %}</script>
-      {% endif %}
-      {% if page_type == "index" %}
-        <script>{% include "partials/index-script.njk" %}</script>
-      {% endif %}
-        <script>{% include "partials/load-google-webfont-script.njk" %}</script>
-        <script src="{{ base_path }}assets/js/all.js"></script>
-        {# {% include "partials/livereload-script.njk" %} #}
+        {% if page_type == "page" %}
+          <script>{% include "partials/modal-script.njk" %}</script>
+        {% endif %}
+        {% if page_type == "index" %}
+          <script>{% include "partials/index-script.njk" %}</script>
+        {% endif %}
+          <script>{% include "partials/load-google-webfont-script.njk" %}</script>
+          <script src="{{ base_path }}assets/js/all.js"></script>
+          {# {% include "partials/livereload-script.njk" %} #}
       {% endblock %}
   </body>
 </html>
