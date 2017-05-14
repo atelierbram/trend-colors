@@ -1,0 +1,10 @@
+{% macro tileMacro (name, hex, id, coloryear) %}
+  <li class="tile" data-color_name="{{ name }}" data-color_hex="{{ hex }}">
+    <a href="#{{ id }}" class="tile_link" style="background-color:{{ hex }}">
+      <dl class="inner">
+        <dt class="hd">{{ name }}</dt>
+        <dd class="bd"><code>{{ hex }}</code></dd>
+      </dl>
+    </a>
+  </li>
+{% endmacro %}

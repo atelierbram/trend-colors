@@ -1,0 +1,514 @@
+@import
+"settings/colorvars-site",
+"settings/dimensions",
+"mixins/mq",
+"forms/buttons",
+"modules/nav",
+"modules/modal",
+"modules/github-corner";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: $site-color-dark;
+}
+
+html {
+  height: 100%;
+  font-size: 16px;
+}
+
+body {
+  font: 100%/1.5 BlinkMacSystemFont, -apple-system, "Segoe UI", Tahoma, sans-serif;
+  box-sizing: border-box;
+  color: #fff;
+  text-align: center;
+  min-height: 100%;
+}
+
+h1,
+// [class^="section-header-"] > h2,
+.section-header-season h2,
+.tiles .color-white dt {
+  font-weight: 400;
+}
+
+.wf-active body,
+.wf-active h1,
+.wf-active h2,
+.wf-active h3,
+.wf-active h1,
+.wf-active .nav-menu .menu-item,
+.wf-active [data-okay-overflow] a,
+// .wf-active [class^="section-header-"] > h2,
+.wf-active .section-header-season h2,
+.wf-active .tiles .color-white dt,
+.wf-active .modal_close-dismiss,
+.wf-active .modal_close,
+.wf-active button,
+.wf-active [class*="button-"],
+.wf-active .tiles-section .button,
+.wf-active .colophon {
+  font-family: "Source Sans Pro", BlinkMacSystemFont, -apple-system, "Segoe UI", Tahoma, sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px;
+  word-spacing: -1px;
+}
+
+.wf-active .master-palette h2,
+.wf-active .master-palette .button-toggle,
+// .wf-active [data-okay-overflow] > .menu-item-current a,
+.wf-active .tiles dt,
+.wf-active .modals .color-black,
+.wf-active .modals .color-black h3,
+.wf-active .tiles-section > h2,
+.wf-active .section-header-season h2 .toggle-tiles-inversed {
+  font-weight: 400;
+  letter-spacing: 0;
+  word-spacing: 0;
+}
+
+body,
+.page {
+  background-color: inherit;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: hsl(15, 92%, 71%);
+}
+
+.tagline {
+  // color: hsl(30, 100%, 85%);
+  color: hsl(46, 100%, 90%);
+}
+
+.index .tiles-section > h2 {
+  text-align: right;
+  font-size: 1em;
+  padding-top: .125em;
+  padding-right: 1em;
+  padding-left: 1em;
+  background-color: $yellow;
+  background-color: #f6d155;
+  color: $site-color-dark;
+  position: relative;
+  height: $index-h2-height;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  @include mq($from: tablet) {
+    font-size: 1.125em;
+    padding-right: 3em;
+    padding-top: 0.05em;
+  }
+}
+
+.tiles-section > h2:after {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  top: 2.25em;
+  right: 3em;
+  z-index: 1;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40px' viewBox='0 0 40 40'%3E%3Cpolygon fill='rgba(255,255,255,.85)' points='0,0 40,0 20,40'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  animation: fade 20s linear forwards;
+
+  @include mq($from: tablet) {
+    top: 2em;
+  }
+}
+
+@keyframes fade {
+ to {
+   opacity: 0;
+  }
+}
+
+.section-header-season {
+  margin-top: 3em;
+  text-align: left;
+}
+
+// [class^="section-header-"] > h2 {
+.section-header-season h2 {
+  display: inline-block;
+  font-size: 1.25em;
+  color: $site-color-light;
+}
+
+.toggle-tiles {
+  display: block;
+}
+
+.index .toggle-tiles,
+[class^="year-"] .section-header-season h2 {
+  padding: .3em 1em .35em;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.index .toggle-tiles {
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.index .is-in-view .toggle-tiles {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.page {
+  min-height: 100vh;
+}
+
+[class^="year-"] main {
+  min-height: $main-height; // sticky-footer
+}
+
+.index .tiles-wrap {
+  padding: .05em 3em 3em;
+}
+
+.index .tiles-wrap.is-in-view,
+[class*="year-"] .tiles-section > .tiles-wrap {
+  padding: .05em 3em 6em;
+  position: relative;
+}
+
+[class*="year-"] .tiles-section > .tiles-wrap {
+  min-height: calc(#{$main-height} / 2);
+}
+
+// [class^="section-header-"] > h2,
+[class^="year-"] .section-header-season h2,
+.index .toggle-tiles,
+.site-header,
+.site-footer,
+.tiles {
+  background-color: $site-color-dark;
+}
+
+.index .toggle-tiles:hover {
+  // background-color: adjust-color($site-color-dark, $lightness: 5%);
+  background-color: transparentize($site-color-dark, .15);
+}
+
+.index .toggle-tiles-inversed {
+  background-color: $site-color-light;
+}
+
+
+.index .toggle-tiles-inversed:hover {
+  background-color: transparentize($site-color-light, .2);
+}
+
+.site-header,
+.site-footer {
+  color: #fff;
+}
+
+.site-header {
+  min-height: $site-header-height;
+}
+
+.site-footer {
+  min-height: $site-footer-height;
+}
+
+.site-footer {
+  padding-top: .5em;
+}
+
+.tiles,
+.modals,
+.modal_inner_list {
+  list-style: none;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  transition: all .3s;
+}
+
+// .site-footer a {
+//   color: adjust-color(cyan, $lightness: 20%);
+// }
+
+// a:hover {
+//   color: cyan;
+// }
+//
+
+code {
+  font-family: Consolas, Menlo, Monaco, "Courier New", monospace;
+  font-size: .875em;
+}
+
+// tiles
+.tiles {
+  border-bottom-right-radius: 5px;
+}
+
+
+.tiles li {
+  position: relative;
+  display: inline-block;
+}
+
+.index .tiles li:hover {
+  cursor: pointer;
+}
+
+.index .tiles li,
+.tiles .tile_link {
+  display: block;
+  color: inherit;
+  padding: 1.5em 1em;
+}
+
+.tiles dt {
+  font-size: 1em;
+}
+
+.has-index-script-loaded .tiles {
+  display: none;
+  opacity: 0;
+  transition: transform .3s ease-in-out, opacity .3s ease-in-out;
+}
+
+.has-index-script-loaded .is-active.tiles {
+  display: block;
+  opacity: 1;
+  transform: scale(1);
+  transform-origin: top;
+  animation: animBlock .3s ease-in-out;
+}
+
+
+@keyframes animBlock {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: grid;
+    opacity: 0;
+    transform: scale(1,0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+//
+.modals-section h2 {
+  display: none;
+}
+
+.modal_item {
+  position: fixed;
+  top:0;right:0;bottom:0;left:0;
+  background-color: hsla(0, 0%, 0%, .9);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal_item,
+// hit ESC key, see javascript
+.modal_item.is-hidden:target {
+  opacity: 0;
+  z-index: -1;
+}
+
+.modal_item:target {
+  opacity: 1;
+  z-index: 1;
+}
+
+.modal_inner {
+  width: 40vmax;
+  min-height: 40vmin;
+  margin: 0 auto;
+  padding: 3em 1em;
+  position: relative;
+}
+
+.modal_inner,
+.modal_close {
+  border-radius: 5px;
+}
+
+.modal_close {
+  position: absolute;
+  display: block;
+  color: white;
+}
+
+.modal_close-x {
+  top: 0;
+  right: .5rem;
+  padding: 0 .6rem;
+}
+
+.modal_close-dismiss {
+  bottom: 1rem;
+  left: 1rem;
+  border: 1px solid hsla(0, 0%, 0%, .25);
+  padding: .25em .5em;
+  text-transform: uppercase;
+  // color: inherit;
+  // color: white;
+  background-color: hsla(0, 0%, 0%, .25);
+}
+
+.modal_close-dismiss:hover {
+  background-color: hsla(0, 0%, 0%, .5);
+}
+
+.modal_item > .modal_close{
+  font-size: 2em;
+}
+
+.modal_inner > .modal_close{
+  font-size: 1.25em;
+}
+
+.modal_inner > .modal_close-x {
+  top: .5rem;
+  background-color: hsla(0, 0%, 0%, .9);
+}
+
+// Cloned list-items, user selection in `.variables-selection`
+// .variables-selection,
+// .variables-selection * {
+//   outline: 1px dotted salmon;
+// }
+
+.variables-selection {
+  position: fixed;
+  top: 212px;
+  right: 0;
+  padding-left: 2em;
+  min-width: 302px;
+  transition: all .3s ease-in-out;
+}
+
+.is-offscreen.variables-selection {
+  right: 2em;
+  transform: translateX(100%);
+}
+
+.variables-selection_list {
+  list-style: none;
+  text-align: left;
+  position: relative;
+}
+
+.variables-selection_list .tile {
+  padding: .25em 1em;
+}
+
+.variables-selection .toggle-view,
+.variables-selection [class*="toggle-view-image"] {
+  display: block;
+  width: 2em;
+  height: 100%;
+  border-top-left-radius: .4em .5em;
+  border-bottom-left-radius: .4em .5em;
+}
+
+.variables-selection .toggle-view {
+  position: absolute;
+  // display: block;
+  // width: 2em;
+  // height: 100%;
+  top:0;left:-2em;bottom:0;
+  background-color: transparentize($site-color-dark, .25);
+  cursor: pointer;
+  pointer-events: all;
+}
+
+.variables-selection .toggle-view:hover {
+  background-color: transparentize($site-color-dark, .15);
+}
+
+.variables-selection .toggle-view-image-collapse {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='12px' viewBox='0 0 18 24'%3E%3Cpolygon fill='rgb(255,255,255)' points='0,24 18,12 0,0'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.variables-selection.is-offscreen .toggle-view-image-collapse {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='12px' viewBox='0 0 18 24'%3E%3Cpolygon fill='rgb(255,255,255)' points='0,12 18,0 18,24'/%3E%3C/svg%3E");
+}
+
+.tiles .id,
+.variables-selection_list .hd,
+.variables-selection .toggle-view-image-expand,
+.initially-hidden {
+  display: none;
+}
+
+.variables-selection_list .id,
+.variables-selection_list .hex {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.variables-selection_list .initially-hidden.semicolon {
+  display: inline;
+}
+
+// grid layout override in @supports feature test
+@supports (display: grid) {
+
+  .tiles {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  }
+
+  .has-index-script-loaded .is-active.tiles {
+    display: grid;
+    animation: animGrid .3s ease-in-out;
+  }
+
+
+  @keyframes animGrid {
+    0% {
+      display: none;
+      opacity: 0;
+    }
+    1% {
+      display: grid;
+      opacity: 0;
+      transform: scale(1,0);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+}
+

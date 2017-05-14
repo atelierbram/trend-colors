@@ -1,0 +1,6 @@
+// TrendColors 2015 - Fall | https://github.com/atelierbram/trend-colors/docs/assets/sass/schemes/_trendColors_2015-fall.scss
+{% import "macros/macro-sass.njk" as macroSass %}
+{%- for sass in tiles_2015_fall -%}
+  {{ macroSass.sassMacro(sass.tile_id, sass.tile_hex) }}
+{%- endfor -%}
+

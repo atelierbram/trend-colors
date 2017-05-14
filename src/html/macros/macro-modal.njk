@@ -1,0 +1,17 @@
+{% macro modalMacro (id, name, hex, number) %}
+  <li class="modal_item modal-{{ id }} color-black" id="{{ id }}" data-color_name="{{ name }}" data-color_hex="{{ hex }}">
+    <div class="modal_inner" style="background-color:{{ hex }}">
+      <div class="hd"><h3>{{ name }}</h3></div>
+      <div class="bd">
+      <ul class="modal_inner_list">
+        <li class="modal_inner_list_hex"><code>{{ hex }}</code></li>
+        <li class="modal_inner_list_pantone-color-code"><code>{{ number }}</code></li>
+        <li class="modal_inner_list_link-to-pantone"><a href="https://www.pantone.com/color-finder/{{ number }}-TCX">on pantone.com</a> </li>
+      </ul>
+      </div>
+      <a href="#close" class="modal_close modal_close-x">&times;</a>
+      <a href="#close" class="modal_close modal_close-dismiss">dismiss</a>
+    </div>
+    <a href="#close" class="modal_close modal_close-x">&times;</a>
+  </li>
+{% endmacro %}

@@ -1,0 +1,9 @@
+{% macro tileindexMacro (name, hex, id, coloryear) %}
+  <li class="tile" data-color_name="{{ name }}" data-color_hex="{{ hex }}" style="background-color:{{ hex }}">
+    <dl class="inner">
+      <dt class="hd">{{ name }}</dt>
+      <dd class="id"><code>${{ id }}:</code></dd>
+      <dd class="hex"><code>{{ hex }}<span class="initially-hidden semicolon">;</span></code></dd>
+    </dl>
+  </li>
+{% endmacro %}

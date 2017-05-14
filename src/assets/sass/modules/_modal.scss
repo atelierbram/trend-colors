@@ -1,0 +1,42 @@
+ .modals .modal_item h3 {
+  font-size: 2em;
+}
+
+.modal_inner_list {
+  display: flex;
+  flex-direction: column;
+  min-height: 12em;
+ }
+
+.modal_inner_list_link-to-pantone {
+  margin-top: auto;
+  margin-bottom: 2em;
+ }
+
+.modal_inner_list_link-to-pantone a {
+  display: inline-block;
+  padding: .25em 1em .33335em;
+  border-radius: 3px;
+}
+
+.modal_inner_list_link-to-pantone a,
+.modal_inner_list_link-to-pantone a:hover {
+  color: inherit;
+}
+
+.color-white .modal_inner_list_link-to-pantone a {
+  background-color: hsla(0,0%,0%,.5);
+}
+
+.color-white .modal_inner_list_link-to-pantone a:hover {
+  background-color: hsla(0,0%,0%,.75);
+}
+
+.color-black .modal_inner_list_link-to-pantone a {
+  background-color: hsla(0,100%,100%,.5);
+}
+
+.color-black .modal_inner_list_link-to-pantone a:hover {
+  background-color: hsla(0,100%,100%,.75);
+}
+

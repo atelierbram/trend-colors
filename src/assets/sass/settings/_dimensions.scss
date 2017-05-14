@@ -1,0 +1,5 @@
+$site-header-height: 90px;
+$site-nav-height: 40px;
+$site-footer-height: 48px;
+$index-h2-height: 30px;
+$main-height: calc(100vh - #{$site-header-height} - #{$site-nav-height} - #{$site-footer-height}); // sticky-footer

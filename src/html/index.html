@@ -1,0 +1,235 @@
+{% extends "layouts/layout.njk" %}
+
+{% set base_path = "" %}
+{% set page_title = "Index" %}
+{% set page_type = "index" %}
+{% set body_classes = "index" %}
+{% set main_header_classes = "header-index" %}
+{% set color_season_spring_2017 = "#88b04b" %}
+{% set color_season_fall_2017 = "#9a9738" %}
+{% set color_season_spring_2016 = "#f7cac9" %}
+{% set color_season_fall_2016 = "#b93a32" %}
+{% set color_season_spring_2015 = "#e78b90" %}
+{% set color_season_fall_2015 = "#964f4c" %}
+{% set color_season_spring_2014 = "#6b264b" %}
+{% set color_season_fall_2014 = "#ad5e99" %}
+{% set color_season_spring_2013 = "#009473" %}
+{% set color_season_fall_2013 = "#6e6e5c" %}
+{% set color_season_spring_2012 = "#dd4124" %}
+{% set color_season_fall_2012 = "#58423f" %}
+{% set color_season_spring_2011 = "#d94f70" %}
+{% set color_season_fall_2011 = "#692d5d" %}
+{% set color_season_spring_2010 = "#45b5aa" %}
+{% set color_season_fall_2010 = "#4d9e9a" %}
+{% set color_season_spring_2009 = "#e4bf45" %}
+{% set color_season_fall_2009 = "#ca9456" %}
+{% set color_season_spring_2008 = "#c4ab86" %}
+{% set color_season_fall_2008 = "#5a5b9f" %}
+{% set color_season_spring_2007 = "#8abad3" %}
+{% set color_season_fall_2007 = "#9b1b30" %}
+
+{% import "macros/macro-tileindex.njk" as macroTileindex %}
+{# {% import "macros/macro-vars.njk" as macroVars %} #}
+
+{% block main %}
+  {{ super() }}
+  <section class="tiles-section">
+    <h2>Click on your favorite colors; pick your variables!</h2>
+
+    <div class="tiles-wrap tiles-wrap-spring" style="background-color:{{ color_season_spring_2017 }}">
+      <header class="section-header-season"><h2><a class="toggle-tiles" href="#tilesSpring2017" style="color:{{ color_season_spring_2017 }}">Spring 2017</a></h2></header>
+      <ul class="tiles tiles-spring" id="tilesSpring2017">
+        {% for tile in tiles_2017_spring %}
+        {{ macroTileindex.tileindexMacro(tile.tile_name, tile.tile_hex, tile.tile_id) }}
+        {% endfor %}
+      </ul>
+    </div>
+
+    <!-- <div class="tiles&#45;wrap tiles&#45;wrap&#45;fall" style="background&#45;color:{{ color_season_fall_2017 }}"> -->
+    <!--   <header class="section&#45;header&#45;season"><h2><a class="toggle&#45;tiles" href="#tilesFall2017" style="color:{{ color_season_fall_2017 }}">Fall 2017</a></h2></header> -->
+    <!--   <ul class="tiles tiles&#45;fall" id="tilesFall2017"> -->
+    <!--     {% for tile in tiles_2017_fall %} -->
+    <!--       {{ macroTileindex.tileindexMacro(tile.tile_name, tile.tile_hex, tile.tile_id) }} -->
+    <!--     {% endfor %} -->
+    <!--   </ul> -->
+    <!-- </div> -->
+
+    <div class="tiles-wrap tiles-wrap-spring" style="background-color:{{ color_season_spring_2016 }}">
+      <header class="section-header-season"><h2><a class="toggle-tiles" href="#tilesSpring2016" style="color:{{ color_season_spring_2016 }}">Spring 2016</a></h2></header>
+      <ul class="tiles tiles-spring" id="tilesSpring2016">
+        {% for tile in tiles_2016_spring %}
+        {{ macroTileindex.tileindexMacro(tile.tile_name, tile.tile_hex, tile.tile_id) }}
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="tiles-wrap tiles-wrap-fall" style="background-color:{{ color_season_fall_2016 }}">
+      <header class="section-header-season"><h2><a class="toggle-tiles toggle-tiles-inversed" href="#tilesFall2016" style="color:{{ color_season_fall_2016 }}">Fall 2016</a></h2></header>
+      <ul class="tiles tiles-fall" id="tilesFall2016">
+        {% for tile in tiles_2016_fall %}
+        {{ macroTileindex.tileindexMacro(tile.tile_name, tile.tile_hex, tile.tile_id) }}
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="tiles-wrap tiles-wrap-spring" style="background-color:{{ color_season_spring_2015 }}">
+      <header class="section-header-season"><h2><a class="toggle-tiles" href="#tilesSpring2015" style="color:{{ color_season_spring_2015 }}">Spring 2015</a></h2></header>
+      <ul class="tiles tiles-spring" id="tilesSpring2015">
+        {% for tile in tiles_2015_spring %}
+        {{ macroTileindex.tileindexMacro(tile.tile_name, tile.tile_hex, tile.tile_id) }}
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="tiles-wrap tiles-wrap-fall" style="background-color:{{ color_season_fall_2015 }}">
+      <header class="section-header-season"><h2><a class="toggle-tiles toggle-tiles-inversed" href="#tilesFall2015" style="color:{{ color_season_fall_2015 }}">Fall 2015</a></h2></header>
+      <ul class="tiles tiles-fall" id="tilesFall2015">
+        {% for tile in tiles_2015_fall %}
+        {{ macroTileindex.tileindexMacro(tile.tile_name, tile.tile_hex, tile.tile_id) }}
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="tiles-wrap tiles-wrap-spring" style="background-color:{{ color_season_spring_2014 }}">
+      <header class="section-header-season"><h2><a class="toggle-tiles toggle-tiles-inversed" href="#tilesSpring2014" style="color:{{ color_season_spring_2014 }}">Spring 2014</a></h2></header>
+      <ul class="tiles tiles-spring" id="tilesSpring2014">
+        {% for tile in tiles_2014_spring %}
+        {{ macroTileindex.tileindexMacro(tile.tile_name, tile.tile_hex, tile.tile_id) }}
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="tiles-wrap tiles-wrap-fall" style="background-color:{{ color_season_fall_2014 }}">
+      <header class="section-header-season"><h2><a class="toggle-tiles toggle-tiles-inversed" href="#tilesFall2014" style="color:{{ color_season_fall_2014 }}">Fall 2014</a></h2></header>
+      <ul class="tiles tiles-fall" id="tilesFall2014">
+        {% for tile in tiles_2014_fall %}
+        {{ macroTileindex.tileindexMacro(tile.tile_name, tile.tile_hex, tile.tile_id) }}
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="tiles-wrap tiles-wrap-spring" style="background-color:{{ color_season_spring_2013 }}">
+      <header class="section-header-season"><h2><a class="toggle-tiles toggle-tiles-inversed" href="#tilesSpring2013" style="color:{{ color_season_spring_2013 }}">Spring 2013</a></h2></header>
+      <ul class="tiles tiles-spring" id="tilesSpring2013">
+        {% for tile in tiles_2013_spring %}
+        {{ macroTileindex.tileindexMacro(tile.tile_name, tile.tile_hex, tile.tile_id) }}
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="tiles-wrap tiles-wrap-fall" style="background-color:{{ color_season_fall_2013 }}">
+      <header class="section-header-season"><h2><a class="toggle-tiles toggle-tiles-inversed" href="#tilesFall2013" style="color:{{ color_season_fall_2013 }}">Fall 2013</a></h2></header>
+      <ul class="tiles tiles-fall" id="tilesFall2013">
+        {% for tile in tiles_2013_fall %}
+        {{ macroTileindex.tileindexMacro(tile.tile_name, tile.tile_hex, tile.tile_id) }}
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="tiles-wrap tiles-wrap-spring" style="background-color:{{ color_season_spring_2012 }}">
+      <header class="section-header-season"><h2><a class="toggle-tiles toggle-tiles-inversed" href="#tilesSpring2012" style="color:{{ color_season_spring_2012 }}">Spring 2012</a></h2></header>
+      <ul class="tiles tiles-spring" id="tilesSpring2012">
+        {% for tile in tiles_2012_spring %}
+        {{ macroTileindex.tileindexMacro(tile.tile_name, tile.tile_hex, tile.tile_id) }}
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="tiles-wrap tiles-wrap-fall" style="background-color:{{ color_season_fall_2012 }}">
+      <header class="section-header-season"><h2><a class="toggle-tiles toggle-tiles-inversed" href="#tilesFall2012" style="color:{{ color_season_fall_2012 }}">Fall 2012</a></h2></header>
+      <ul class="tiles tiles-fall" id="tilesFall2012">
+        {% for tile in tiles_2012_fall %}
+        {{ macroTileindex.tileindexMacro(tile.tile_name, tile.tile_hex, tile.tile_id) }}
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="tiles-wrap tiles-wrap-spring" style="background-color:{{ color_season_spring_2011 }}">
+      <header class="section-header-season"><h2><a class="toggle-tiles" href="#tilesSpring2011" style="color:{{ color_season_spring_2011 }}">Spring 2011</a></h2></header>
+      <ul class="tiles tiles-spring" id="tilesSpring2011">
+        {% for tile in tiles_2011_spring %}
+        {{ macroTileindex.tileindexMacro(tile.tile_name, tile.tile_hex, tile.tile_id) }}
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="tiles-wrap tiles-wrap-fall" style="background-color:{{ color_season_fall_2011 }}">
+      <header class="section-header-season"><h2><a class="toggle-tiles toggle-tiles-inversed" href="#tilesFall2011" style="color:{{ color_season_fall_2011 }}">Fall 2011</a></h2></header>
+      <ul class="tiles tiles-fall" id="tilesFall2011">
+        {% for tile in tiles_2011_fall %}
+        {{ macroTileindex.tileindexMacro(tile.tile_name, tile.tile_hex, tile.tile_id) }}
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="tiles-wrap tiles-wrap-spring" style="background-color:{{ color_season_spring_2010 }}">
+      <header class="section-header-season"><h2><a class="toggle-tiles" href="#tilesSpring2010" style="color:{{ color_season_spring_2010 }}">Spring 2010</a></h2></header>
+      <ul class="tiles tiles-spring" id="tilesSpring2010">
+        {% for tile in tiles_2010_spring %}
+        {{ macroTileindex.tileindexMacro(tile.tile_name, tile.tile_hex, tile.tile_id) }}
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="tiles-wrap tiles-wrap-fall" style="background-color:{{ color_season_fall_2010 }}">
+      <header class="section-header-season"><h2><a class="toggle-tiles toggle-tiles-inversed" href="#tilesFall2010" style="color:{{ color_season_fall_2010 }}">Fall 2010</a></h2></header>
+      <ul class="tiles tiles-fall" id="tilesFall2010">
+        {% for tile in tiles_2010_fall %}
+        {{ macroTileindex.tileindexMacro(tile.tile_name, tile.tile_hex, tile.tile_id) }}
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="tiles-wrap tiles-wrap-spring" style="background-color:{{ color_season_spring_2009 }}">
+      <header class="section-header-season"><h2><a class="toggle-tiles" href="#tilesSpring2009" style="color:{{ color_season_spring_2009 }}">Spring 2009</a></h2></header>
+      <ul class="tiles tiles-spring" id="tilesSpring2009">
+        {% for tile in tiles_2009_spring %}
+        {{ macroTileindex.tileindexMacro(tile.tile_name, tile.tile_hex, tile.tile_id) }}
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="tiles-wrap tiles-wrap-fall" style="background-color:{{ color_season_fall_2009 }}">
+      <header class="section-header-season"><h2><a class="toggle-tiles" href="#tilesFall2009" style="color:{{ color_season_fall_2009 }}">Fall 2009</a></h2></header>
+      <ul class="tiles tiles-fall" id="tilesFall2009">
+        {% for tile in tiles_2009_fall %}
+        {{ macroTileindex.tileindexMacro(tile.tile_name, tile.tile_hex, tile.tile_id) }}
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="tiles-wrap tiles-wrap-spring" style="background-color:{{ color_season_spring_2008 }}">
+      <header class="section-header-season"><h2><a class="toggle-tiles" href="#tilesSpring2008" style="color:{{ color_season_spring_2008 }}">Spring 2008</a></h2></header>
+      <ul class="tiles tiles-spring" id="tilesSpring2008">
+        {% for tile in tiles_2008_spring %}
+        {{ macroTileindex.tileindexMacro(tile.tile_name, tile.tile_hex, tile.tile_id) }}
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="tiles-wrap tiles-wrap-fall" style="background-color:{{ color_season_fall_2008 }}">
+      <header class="section-header-season"><h2><a class="toggle-tiles toggle-tiles-inversed" href="#tilesFall2008" style="color:{{ color_season_fall_2008 }}">Fall 2008</a></h2></header>
+      <ul class="tiles tiles-fall" id="tilesFall2008">
+        {% for tile in tiles_2008_fall %}
+        {{ macroTileindex.tileindexMacro(tile.tile_name, tile.tile_hex, tile.tile_id) }}
+        {% endfor %}
+      </ul>
+    </div>
+
+   <div class="tiles-wrap tiles-wrap-spring" style="background-color:{{ color_season_spring_2007 }}">
+      <header class="section-header-season"><h2><a class="toggle-tiles" href="#tilesSpring2007" style="color:{{ color_season_spring_2007 }}">Spring 2007</a></h2></header>
+      <ul class="tiles tiles-spring" id="tilesSpring2007">
+        {% for tile in tiles_2007_spring %}
+        {{ macroTileindex.tileindexMacro(tile.tile_name, tile.tile_hex, tile.tile_id) }}
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="tiles-wrap tiles-wrap-fall" style="background-color:{{ color_season_fall_2007 }}">
+      <header class="section-header-season"><h2><a class="toggle-tiles toggle-tiles-inversed" href="#tilesFall2007" style="color:{{ color_season_fall_2007 }}">Fall 2007</a></h2></header>
+      <ul class="tiles tiles-fall" id="tilesFall2007">
+        {% for tile in tiles_2007_fall %}
+        {{ macroTileindex.tileindexMacro(tile.tile_name, tile.tile_hex, tile.tile_id) }}
+        {% endfor %}
+      </ul>
+    </div>
+
+  </section>
+
+  {% endblock %}

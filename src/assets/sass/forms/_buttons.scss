@@ -1,0 +1,284 @@
+// @import "buttons";
+
+// @import "fields";
+
+
+// https://github.com/nathansmith/formalize/blob/master/assets/css/_formalize.scss
+
+// UI Consistency
+
+// input[type="search"]::-webkit-search-decoration {
+//   display: none;
+// }
+
+// input,
+// select,
+// textarea,
+button,
+a.button {
+  // Suppress red glow that Firefox
+  // adds to form fields by default.
+  &:invalid {
+    box-shadow: none;
+  }
+
+  // Add blue glow.
+  &:focus {
+    box-shadow: #06f 0 0 5px 0;
+    // for Opera
+    z-index: 1;
+  }
+}
+
+// input[type="file"],
+// input[type="radio"],
+// input[type="checkbox"] {
+//   &:focus,
+//   &:active {
+//     box-shadow: none;
+//   }
+// }
+
+div[class*="button"] a,
+a[class*="button"],
+[class*="button-"],
+button,
+// input[type="reset"],
+// input[type="submit"],
+input[type="button"] {
+  -webkit-appearance: none;
+  background-clip: padding-box;
+  cursor: pointer;
+  display: inline-block;
+  outline: 0;
+  overflow: visible;
+  margin: 0;
+  padding: .4em 1em .45em;
+  text-decoration: none;
+  vertical-align: top;
+  width: auto;
+  white-space: nowrap;
+  box-sizing: border-box;
+  background-color: $site-color-dark;
+  color: $site-color-light;
+  border: none;
+  text-decoration: none;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1.125em;
+  line-height: 1.3;
+  font-weight: 400;
+
+  &:hover {
+    background-color: transparentize($site-color-dark, .15);
+    text-decoration: none;
+  }
+
+  &:active {
+    color: #fff;
+    background-color: transparentize($site-color-dark, .2);
+  }
+
+  // Kill phantom spacing and dotted
+  // border that appears in Firefox.
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+}
+
+button svg {
+  pointer-events: none;
+}
+// .btn-text {
+//   display: inline-block;
+//   z-index: 1;
+//   position: relative;
+//   margin-left: 1.75em;
+//   vertical-align: middle;
+//   text-shadow: none;
+// }
+//
+// .icon-button_svg {
+//   fill-color: $dark08;
+// }
+//
+// .button-icon {
+//   position: relative;
+//
+//   &:hover {
+//   background: $light01;
+//   color: $base02;
+//   }
+// }
+
+
+// textarea,
+// select,
+// input[type="date"],
+// input[type="datetime"],
+// input[type="datetime-local"],
+// input[type="email"],
+// input[type="month"],
+// input[type="number"],
+// input[type="password"],
+// input[type="search"],
+// input[type="tel"],
+// input[type="text"],
+// input[type="time"],
+// input[type="url"],
+// input[type="week"] {
+//   box-sizing: border-box;
+//   background-clip: padding-box;
+//   border-radius: 4px;
+//   -webkit-appearance: none;
+//   background: adjust-color($light01, $lightness: 7%);
+//   border: 1px solid;
+//   border-color: $light02;
+//   color: $dark01;
+//   outline: 0;
+//   font-size: 16px;
+//   width: 100%;
+//   padding: .125em .5em;
+//   margin: 2px 6px 16px 0;
+//   text-align: left;
+//   height: 1.8em;
+//   vertical-align: top;
+//   font-family: inherit;
+//
+//   &[disabled] {
+//     background-color: #eee;
+//   }
+// }
+
+// input[disabled],
+// select[disabled],
+// select[disabled] option,
+// select[disabled] optgroup,
+// textarea[disabled],
+button[disabled],
+a.button_disabled {
+  box-shadow: none;
+  user-select: none;
+  color: $base04;
+  cursor: default;
+}
+
+// .tiles-section > [class*="-wrap"] .button {
+.tiles-section .button {
+  position: absolute;
+  right: 3em;
+}
+
+.tiles-section .button:hover {
+  color: inherit;
+}
+
+.tiles-wrap-spring .button-download {
+  bottom: 1em;
+}
+
+.tiles-wrap-fall .button-download {
+  top: 1em;
+}
+
+// Separate rule for Firefox.
+// Separate rule for IE, too.
+// Cannot stack with WebKit's.
+// input::-webkit-input-placeholder,
+// textarea::-webkit-input-placeholder {
+//   color: $base04;
+// }
+//
+// input:-moz-placeholder,
+// textarea:-moz-placeholder {
+//   color: $base04;
+// }
+//
+// input.placeholder_text,
+// textarea.placeholder_text {
+//   color: $base04;
+// }
+//
+// [placeholder]:focus::-webkit-input-placeholder {
+//   transition: opacity .4s .2s ease;
+//   opacity: 0;
+// }
+//
+// textarea,
+// select[size],
+// select[multiple] {
+//   height: auto;
+// }
+//
+// // Set height back to normal,
+// // for Opera, WebKit, and IE.
+// select[size="0"],
+// select[size="1"] {
+//   height: 1.8em;
+// }
+//
+// // Tweaks for Safari + Chrome.
+// @media (-webkit-min-device-pixel-ratio: 0) {
+//   select[size],
+//   select[multiple],
+//   select[multiple][size] {
+//     background-image: none;
+//     padding-right: 3px;
+//   }
+//
+//   select,
+//   select[size="0"],
+//   select[size="1"] {
+//     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13 4' width='13px' height='4px'%3E%3Cpolygon fill='rgb(24,44,53)' points='4,4 0,0 8,0'/%3E%3C/svg%3E");
+//     background-repeat: no-repeat;
+//     background-position: right center;
+//     padding-right: 20px;
+//   }
+//
+//   ::-webkit-validation-bubble-message {
+//     -webkit-box-shadow: none;
+//     box-shadow: none;
+//     background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #666), color-stop(1, black));
+//     border: 0;
+//     color: white;
+//     font: 13px/17px inherit;
+//     overflow: hidden;
+//     padding: 15px 15px 17px;
+//     text-shadow: black 0 0 1px;
+//     min-height: 16px;
+//   }
+//
+//   ::-webkit-validation-bubble-arrow,
+//   ::-webkit-validation-bubble-top-outer-arrow,
+//   ::-webkit-validation-bubble-top-inner-arrow {
+//     -webkit-box-shadow: none;
+//     box-shadow: none;
+//     background: #666;
+//     border-color: #666;
+//   }
+// }
+//
+// textarea {
+//   min-height: 40px;
+//   overflow: auto;
+//   resize: vertical;
+//   width: 100%;
+// }
+//
+// optgroup {
+//   color: black;
+//   font-style: normal;
+//   font-weight: normal;
+//
+//   // Font family repeated, for Firefox.
+//   font-family: inherit;
+//
+//   // Kill phantom spacing and dotted
+//   // border that appears in Firefox.
+//   &::-moz-focus-inner {
+//     border: 0;
+//     padding: 0;
+//   }
+// }
+//

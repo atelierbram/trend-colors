@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html class="no-js core no-flexbox" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>trendColors - {{ page_title }}</title>
+    <meta name="description" content="Colors from Pantone’s biannual fashion color report converted into colorschemes - for designers to play with and customize &mdash; {{ page_title }}">
+
+    {% block head_styles %}
+      <style>{% include "partials/critical-css-styles.njk" %}</style>
+    {% endblock %}
+    {# <link rel="stylesheet" href="{{ base_path }}assets/css/style.min.css"> #}
+    <link rel="preload" href="{{ base_path }}assets/css/style.min.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ base_path }}assets/css/style.min.css"></noscript>
+
+    {%- if page_type == "extendedColorscheme" -%}
+      <link rel="stylesheet" href="{{ base_path }}assets/css/extended-colorscheme.css">
+    {%- endif -%}
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% block head_scripts %}
+      {% include "partials/feature-tests-script.njk" %}
+      <script>{% include "partials/loadCSS-script.njk" %}</script>
+    {% endblock %}
+<link rel="author" href="https://plus.google.com/+BramdeHaan/posts">
+  </head>
+  <body class="{{ body_classes }}">
+    <div id="page" class="page">
+      <header id="main-header" class="site-header {{ main_header_classes }}">
+        {% block header %}
+          {% include "components/header.njk" %}
+        {% endblock %}
+      </header>
+      <div class="main-navigation-wrapper">
+        <nav id="site-navigation" class="main-navigation {{ main_nav_classes }}">
+          {% block nav %}
+            {% include "components/nav.njk" %}
+          {% endblock %}
+        </nav>
+      </div>
+      <main>
+          {% block main %}
+          {% endblock %}
+      </main>
+      <footer id="colophon" class="site-footer" {{ main_footer_classes }}>
+        <div class="site-info swbb-container">
+          <small class="colophon">
+             {% block footer %}
+               {% include "components/footer.njk" %}
+             {% endblock %}
+          </small>
+        </div><!-- .site-info -->
+      </footer><!-- #colophon -->
+    </div><!-- #page.page -->
+
+      {% block footer_scripts %}
+      {% if page_type == "extendedColorscheme" %}
+        <script>{% include "partials/set-color-info-script.njk" %}</script>
+        <script>{% include "partials/extended-colorscheme-script.njk" %}</script>
+      {% endif %}
+      {% if page_type == "page" %}
+        <script>{% include "partials/modal-script.njk" %}</script>
+      {% endif %}
+      {% if page_type == "index" %}
+        <script>{% include "partials/index-script.njk" %}</script>
+      {% endif %}
+        <script>{% include "partials/load-google-webfont-script.njk" %}</script>
+        <script src="{{ base_path }}assets/js/all.js"></script>
+        {# {% include "partials/livereload-script.njk" %} #}
+      {% endblock %}
+  </body>
+</html>
