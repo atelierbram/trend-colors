@@ -265,12 +265,15 @@ code {
 // tiles
 .tiles {
   border-bottom-right-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 
 .tiles li {
   position: relative;
   display: inline-block;
+  min-width: 144px;
 }
 
 .index .tiles li:hover {
@@ -491,6 +494,10 @@ code {
   .has-index-script-loaded .is-active.tiles {
     display: grid;
     animation: animGrid .3s ease-in-out;
+  }
+
+  .tiles li {
+    min-width: 0;
   }
 
 

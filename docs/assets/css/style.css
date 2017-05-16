@@ -99,7 +99,7 @@ a.button_disabled {
 
 .main-navigation-wrapper {
   background-color: rgba(235, 235, 235, 0.25);
-  background-image: linear-gradient(to bottom, #1f1f1f, #2b2b2b 12%, #404040 30%, #4d4d4d 50%, #404040 75%, #1f1f1f);
+  background-image: linear-gradient(to bottom, #1f1f1f, #2b2b2b 10%, #3d3d3d 27%, #404040 30%, #575757 50%, #4d4d4d 75%, #474747 90%, #2b2b2b);
   position: relative;
   padding-left: 3em;
 }
@@ -636,11 +636,16 @@ code {
 
 .tiles {
   border-bottom-right-radius: 5px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .tiles li {
   position: relative;
   display: inline-block;
+  min-width: 144px;
 }
 
 .index .tiles li:hover {
@@ -856,6 +861,9 @@ code {
     display: -ms-grid;
     display: grid;
     animation: animGrid .3s ease-in-out;
+  }
+  .tiles li {
+    min-width: 0;
   }
   @keyframes animGrid {
     0% {
