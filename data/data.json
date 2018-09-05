@@ -47,7 +47,7 @@
       "tile_id" : "cafe-creme",
       "tile_hex" : "#c79685",
       "tile_number" : "16-1220"
-    }, 
+    },
     {
       "tile_name" : "Strawberry Ice",
       "tile_id" : "strawberry-ice",
@@ -68,7 +68,7 @@
       "tile_id" : "carafe",
       "tile_hex" : "#5d473a",
       "tile_number" : "19-1116"
-    }, 
+    },
     {
       "tile_name" : "Burnt Ochre",
       "tile_id" : "burnt-ochre",
@@ -116,7 +116,7 @@
       "tile_id" : "cashmere-rose",
       "tile_hex" : "#ce879f",
       "tile_number" : "16-2215"
-    }, 
+    },
     {
       "tile_name" : "Purple Wine",
       "tile_id" : "purple-wine",
@@ -1610,7 +1610,148 @@
     }
   ],
 
+  "tiles_2018_spring" : [
+    {
+      "tile_name" : "Meadowlark",
+      "tile_id" : "meadowlark",
+      "tile_hex" : "#ead94e",
+      "tile_number" : "13-0646"
+    },
+    {
+      "tile_name" : "Cherry Tomato",
+      "tile_id" : "cherry-tomato",
+      "tile_hex" : "#eb3c27",
+      "tile_number" : "17-1563"
+    },
+    {
+      "tile_name" : "Little Boy Blue",
+      "tile_id" : "little-boy-blue",
+      "tile_hex" : "#6ea2d5",
+      "tile_number" : "16-4132"
+    },
+    {
+      "tile_name" : "Chili Oil",
+      "tile_id" : "chili-oil",
+      "tile_hex" : "#8e3c36",
+      "tile_number" : "18-1440"
+    },
+    {
+      "tile_name" : "Pink Lavender",
+      "tile_id" : "pink-lavender",
+      "tile_hex" : "#d9afca",
+      "tile_number" : "14-3207"
+    },
+     {
+      "tile_name" : "Blooming Dahlia",
+      "tile_id" : "blooming-dahlia",
+      "tile_hex" : "#eb9687",
+      "tile_number" : "15-1520"
+    },
+    {
+      "tile_name" : "Arcadia",
+      "tile_id" : "arcadia",
+      "tile_hex" : "#00a28a",
+      "tile_number" : "16-5533"
+    },
+    {
+      "tile_name" : "Ultra Violet",
+      "tile_id" : "ultra-violet",
+      "tile_hex" : "#5f4b8b",
+      "tile_number" : "18-3838"
+    }, 
+    {
+      "tile_name" : "Emperador",
+      "tile_id" : "emperador",
+      "tile_hex" : "#684832",
+      "tile_number" : "18-1028"
+    },
+    {
+      "tile_name" : "Almost Mauve",
+      "tile_id" : "almost-mauve",
+      "tile_hex" : "#e7dcd9",
+      "tile_number" : "12-2103"
+    },
+    {
+      "tile_name" : "Spring Crocus",
+      "tile_id" : "spring-crocus",
+      "tile_hex" : "#ba69a1",
+      "tile_number" : "17-3020"
+    },
+    {
+      "tile_name" : "Lime Punch",
+      "tile_id" : "lime-punch",
+      "tile_hex" : "#c0d725",
+      "tile_number" : "13-0550"
+    }
+  ],
+
+   "tiles_2018_fall" : [ 
+    {
+      "tile_name" : "Red Pear",
+      "tile_id" : "red-pear",
+      "tile_hex" : "#7b3539",
+      "tile_number" : "19-1536"
+    },
+    {
+      "tile_name" : "Valiant Poppy",
+      "tile_id" : "valiant-poppy",
+      "tile_hex" : "#bc322c",
+      "tile_number" : "18-1549"
+    },
+    {
+      "tile_name" : "Nebulas Blue",
+      "tile_id" : "nebulas-blue",
+      "tile_hex" : "#2d62a3",
+      "tile_number" : "18-4048"
+    },
+    {
+      "tile_name" : "Ceylon Yellow",
+      "tile_id" : "ceylon-yellow",
+      "tile_hex" : "#d4ae40",
+      "tile_number" : "15-0850"
+    },
+    {
+      "tile_name" : "Martini Olive",
+      "tile_id" : "martini-olive",
+      "tile_hex" : "#716a4d",
+      "tile_number" : "18-0625"
+    },
+    {
+      "tile_name" : "Russet Orange",
+      "tile_id" : "russet-orange",
+      "tile_hex" : "#e47127",
+      "tile_number" : "16-1255"
+    },
+    {
+      "tile_name" : "Ultra Violet",
+      "tile_id" : "ultra-violet",
+      "tile_hex" : "#5f4b8b",
+      "tile_number" : "18-3838"
+    },
+    {
+      "tile_name" : "Crocus Petal",
+      "tile_id" : "crocus-petal",
+      "tile_hex" : "#b99bc5",
+      "tile_number" : "15-3520"
+    },
+    {
+      "tile_name" : "Limelight",
+      "tile_id" : "limelight",
+      "tile_hex" : "#f0e87d",
+      "tile_number" : "12-0740"
+    },
+    {
+      "tile_name" : "Quetzal Green",
+      "tile_id" : "quetzal-green",
+      "tile_hex" : "#006865",
+      "tile_number" : "18-5025"
+    }
+  ],
+
   "navItems" : [
+    {
+      "menu_item" : "2018"
+    }, 
     {
       "menu_item" : "2017"
     },

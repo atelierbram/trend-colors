@@ -1,12 +1,12 @@
 {% extends "layouts/layout.njk" %}
 
 {% set base_path = "../" %}
-{% set page_title = "2017" %}
+{% set page_title = "2018" %}
 {% set page_type = "page" %}
-{% set body_classes = "year-2017" %}
-{% set main_header_classes = "header-2017" %}
-{% set color_season_spring_2017 = "#88b04b" %}
-{% set color_season_fall_2017 = "#9a9738" %}
+{% set body_classes = "year-2018" %}
+{% set main_header_classes = "header-2018" %}
+{% set color_season_spring_2018 = "#6ea2d5" %}
+{% set color_season_fall_2018 = "#5f4b8b" %}
 
 {% import "macros/macro-tile.njk" as macroTile %}
 {% import "macros/macro-modal.njk" as macroModal %}
@@ -15,21 +15,21 @@
   {{ super() }}
   <section class="tiles-section">
 
-    <div class="tiles-wrap tiles-wrap-spring" style="background-color:{{ color_season_spring_2017 }}">
+    <div class="tiles-wrap tiles-wrap-spring" style="background-color:{{ color_season_spring_2018 }}">
       <header class="section-header-season"><h2>Spring</h2></header>
       <ul class="tiles tiles-spring">
-        {% for tile in tiles_2017_spring %}
+        {% for tile in tiles_2018_spring %}
         {{ macroTile.tileMacro(tile.tile_name, tile.tile_hex, tile.tile_id) }}
         {% endfor %}
       </ul>
-      <a id="buttonDownloadSpringVars" class="button button-download" href="https://raw.githubusercontent.com/atelierbram/trend-colors/master/docs/assets/sass/schemes/_trendColors_2017-spring.scss">Variables - Spring 2017</a>
+      <a id="buttonDownloadSpringVars" class="button button-download" href="https://raw.githubusercontent.com/atelierbram/trend-colors/master/docs/assets/sass/schemes/_trendColors_2018-spring.scss">Variables - Spring 2018</a>
     </div>
 
-    <div class="tiles-wrap tiles-wrap-fall" style="background-color:{{ color_season_fall_2017 }}">
-      <a id="buttonDownloadFallVars" class="button button-download" href="https://raw.githubusercontent.com/atelierbram/trend-colors/master/docs/assets/sass/schemes/_trendColors_2017-fall.scss">Variables - Fall 2017</a>
+    <div class="tiles-wrap tiles-wrap-fall" style="background-color:{{ color_season_fall_2018 }}">
+      <a id="buttonDownloadFallVars" class="button button-download" href="https://raw.githubusercontent.com/atelierbram/trend-colors/master/docs/assets/sass/schemes/_trendColors_2018-fall.scss">Variables - Fall 2018</a>
       <header class="section-header-season"><h2>Fall</h2></header>
       <ul class="tiles tiles-fall">
-        {% for tile in tiles_2017_fall %}
+        {% for tile in tiles_2018_fall %}
         {{ macroTile.tileMacro(tile.tile_name, tile.tile_hex, tile.tile_id) }}
         {% endfor %}
       </ul>
@@ -41,7 +41,7 @@
     <h2>Info Spring</h2>
 
     <ul class="modals modals-spring">
-      {% for modal in tiles_2017_spring %}
+      {% for modal in tiles_2018_spring %}
       {{ macroModal.modalMacro(modal.tile_id, modal.tile_name, modal.tile_hex, modal.tile_number) }}
       {% endfor %}
     </ul>
@@ -49,7 +49,7 @@
     <h2>Info Fall</h2>
 
     <ul class="modals modals-fall">
-      {% for modal in tiles_2017_fall %}
+      {% for modal in tiles_2018_fall %}
       {{ macroModal.modalMacro(modal.tile_id, modal.tile_name, modal.tile_hex, modal.tile_number) }}
       {% endfor %}
     </ul>
