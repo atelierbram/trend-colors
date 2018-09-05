@@ -36,14 +36,6 @@ module.exports = function(grunt) {
        }
      }
    },
-  // cssmin: {
-  //  dist: {
-  //   files: {
-  //    'docs/assets/css/style.min.css': 'docs/assets/css/style.css',
-  //    'docs/assets/css/critical-css.min.css': 'docs/assets/css/critical-css.css'
-  //   }
-  //  }
-  // },
   // Watch task
    watch: {
      sass: {
@@ -62,14 +54,6 @@ module.exports = function(grunt) {
          livereload: true
        }
      },
-     // cssmin: {
-     //   files: ["docs/assets/css#<{(||)}>#*.css"],
-     //   tasks: "postcss",
-     //   options: {
-     //     spawn: false,
-     //     livereload: true
-     //   }
-     // },
      js: {
        files: ['src/assets/js/**/*.js'],
        tasks: ['concat','uglify'],
