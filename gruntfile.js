@@ -15,20 +15,21 @@ module.exports = function(grunt) {
        }
      }
    },
+
   // Post CSS task
    postcss: {
      options: {
        map: {
          inline: false, // save all sourcemaps as separate files...
-         processors: [
-           require("autoprefixer")({ browsers: ["last 2 versions"] }),
-           require('cssnano')(),
-         ]
-       }
+       },
+       processors: [
+         require("autoprefixer")({ browsers: "last 2 versions" }),
+         require('cssnano')()
+       ]
      },
      dist: {
-       expand: true,
-       flatten: true,
+       // expand: true,
+       // flatten: true,
        files: {
          'docs/assets/css/style.min.css': 'docs/assets/css/style.css',
          'docs/assets/css/critical-css.min.css': 'docs/assets/css/critical-css.css'
@@ -208,6 +209,7 @@ module.exports = function(grunt) {
        },
        files: { // Dictionary of files
          'docs/index.html': 'docs/index.html', // 'destination': 'source'
+         'docs/year-2018/index.html': 'docs/year-2018/index.html',
          'docs/year-2017/index.html': 'docs/year-2017/index.html',
          'docs/year-2016/index.html': 'docs/year-2016/index.html',
          'docs/year-2015/index.html': 'docs/year-2015/index.html',
@@ -226,16 +228,20 @@ module.exports = function(grunt) {
  });
 
   // Load the plugins to run your tasks
-  require("load-grunt-tasks")(grunt, {
-    scope: "devDependencies"
-  });
+  // require("load-grunt-tasks")(grunt, {
+  //   scope: "devDependencies"
+  // });
+     grunt.loadNpmTasks('grunt-sass','grunt-contrib-concat','grunt-contrib-uglify','grunt-contrib-watch','matchdep','grunt-postcss','grunt-contrib-copy','grunt-contrib-clean');
+
+    require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+
   require("time-grunt")(grunt);
 
   // Default task(s).
   grunt.registerTask("default", [
     "clean:all",
     "sass",
-    "postcss",
+    "postcss:dist",
     "nunjucks",
     "uglify",
     "concat",
@@ -243,4 +249,5 @@ module.exports = function(grunt) {
     "htmlmin",
     "watch"
   ]);
+  grunt.registerTask('build', ['clean','concat', 'uglify', 'sass', 'postcss:dist',  'copy']);
 };
