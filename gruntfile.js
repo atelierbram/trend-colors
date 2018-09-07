@@ -38,20 +38,24 @@ module.exports = function(grunt) {
    },
   // Watch task
    watch: {
+     options: {
+       livereload: 35729,
+     },
+
      sass: {
        files: ["src/assets/sass/**/*.scss"],
-       tasks: "sass",
+       tasks: ['sass','postcss','copy'],
        options: {
-         spawn: false,
-         livereload: true
+         // spawn: false,
+         // livereload: true
        }
      },
      css: {
        files: ["docs/assets/css/**/*.css"],
        tasks: "postcss",
        options: {
-         spawn: false,
-         livereload: true
+         // spawn: false,
+         // livereload: true
        }
      },
      js: {
@@ -65,16 +69,16 @@ module.exports = function(grunt) {
        files: ["src/**/*.html", "src/**/*.njk"],
        tasks: ["clean:html", "nunjucks", "htmlmin"],
        options: {
-         spawn: false,
-         livereload: true
+         // spawn: false,
+         // livereload: true
        }
      },
      gruntfile: {
        files: "gruntfile.js",
        options: {
-         spawn: false,
-         livereload: true,
-         reload: true
+         // spawn: false,
+         // livereload: true,
+         // reload: true
        }
      }
    },
@@ -212,12 +216,12 @@ module.exports = function(grunt) {
  });
 
   // Load the plugins to run your tasks
-  // require("load-grunt-tasks")(grunt, {
-  //   scope: "devDependencies"
-  // });
-     grunt.loadNpmTasks('grunt-sass','grunt-contrib-concat','grunt-contrib-uglify','grunt-contrib-watch','matchdep','grunt-postcss','grunt-contrib-copy','grunt-contrib-clean');
+  require("load-grunt-tasks")(grunt, {
+    scope: "devDependencies"
+  });
+     // grunt.loadNpmTasks('grunt-sass','grunt-contrib-concat','grunt-contrib-uglify','grunt-contrib-watch','matchdep','grunt-postcss','grunt-contrib-copy','grunt-contrib-clean');
 
-    require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+    // require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
   require("time-grunt")(grunt);
 
