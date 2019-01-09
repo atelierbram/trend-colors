@@ -1,0 +1,42 @@
+{% extends "layouts/layout.njk" %}
+
+{% set base_path = "../" %}
+{% set page_title = "2019" %}
+{% set page_type = "page" %}
+{% set body_classes = "year-2019" %}
+{% set main_header_classes = "header-2019" %}
+{% set color_season_spring_2019 = "#ff6f61" %}
+
+{% import "macros/macro-tile.njk" as macroTile %}
+{% import "macros/macro-modal.njk" as macroModal %}
+
+{% block main %}
+  {{ super() }}
+  <section class="tiles-section">
+
+    <div class="tiles-wrap tiles-wrap-spring" style="background-color:{{ color_season_spring_2019 }}">
+      <header class="section-header-season"><h2>Spring</h2></header>
+      <ul class="tiles tiles-spring">
+        {% for tile in tiles_2019_spring %}
+        {{ macroTile.tileMacro(tile.tile_name, tile.tile_hex, tile.tile_id) }}
+        {% endfor %}
+      </ul>
+      <a id="buttonDownloadSpringVars" class="button button-download" href="https://raw.githubusercontent.com/atelierbram/trend-colors/master/docs/assets/sass/schemes/_trendColors_2019-spring.scss">Variables - Spring 2019</a>
+    </div>
+
+
+  </section>
+
+  <section class="modals-section">
+    <h2>Info Spring</h2>
+
+    <ul class="modals modals-spring">
+      {% for modal in tiles_2019_spring %}
+      {{ macroModal.modalMacro(modal.tile_id, modal.tile_name, modal.tile_hex, modal.tile_number) }}
+      {% endfor %}
+    </ul>
+
+
+  </section>
+
+  {% endblock %}

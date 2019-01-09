@@ -197,6 +197,7 @@ module.exports = function(grunt) {
        },
        files: { // Dictionary of files
          'docs/index.html': 'docs/index.html', // 'destination': 'source'
+         'docs/year-2019/index.html': 'docs/year-2019/index.html',
          'docs/year-2018/index.html': 'docs/year-2018/index.html',
          'docs/year-2017/index.html': 'docs/year-2017/index.html',
          'docs/year-2016/index.html': 'docs/year-2016/index.html',
