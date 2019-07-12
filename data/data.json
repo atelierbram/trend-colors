@@ -1845,6 +1845,104 @@
       "tile_number" : "19-0805-TSX"
     }
   ],
+  "tiles_2019_fall" : [
+    {
+      "tile_name" : "Cranberry",
+      "tile_id" : "cranberry",
+      "tile_hex" : "#bb4a4d",
+      "tile_number" : "17-1545-TCX"
+    },
+    {
+      "tile_name" : "Merlot",
+      "tile_id" : "merlot",
+      "tile_hex" : "#72262c",
+      "tile_number" : "19-1534-TCX"
+    },
+    {
+      "tile_name" : "Summer Fig",
+      "tile_id" : "summer-fig",
+      "tile_hex" : "#be4b3b",
+      "tile_number" : "17-1450-TCX"
+    },
+    {
+      "tile_name" : "Crabapple",
+      "tile_id" : "crabapple",
+      "tile_hex" : "#d77e70",
+      "tile_number" : "16-1532-TCX"
+    },
+    {
+      "tile_name" : "Chicory Coffee",
+      "tile_id" : "chicory-coffee",
+      "tile_hex" : "#4a342e",
+      "tile_number" : "19-1419-TCX"
+    },
+     {
+      "tile_name" : "Bluestone",
+      "tile_id" : "bluestone",
+      "tile_hex" : "#577284",
+      "tile_number" : "18-4217-TSX"
+    },
+    {
+      "tile_name" : "Galaxy Blue",
+      "tile_id" : "galaxy-blue",
+      "tile_hex" : "#2a4b7c",
+      "tile_number" : "19-4055-TCX"
+    },
+    {
+      "tile_name" : "Antique Moss",
+      "tile_id" : "antique-moss",
+      "tile_hex" : "#b9a023",
+      "tile_number" : "16-0840-TCX"
+    },
+    {
+      "tile_name" : "Forest Biome",
+      "tile_id" : "forest-biome",
+      "tile_hex" : "#184a45",
+      "tile_number" : "19-5230-TCX"
+    },
+    {
+      "tile_name" : "Hazel",
+      "tile_id" : "hazel",
+      "tile_hex" : "#ae7250",
+      "tile_number" : "17-1143-TCX"
+    },
+    {
+      "tile_name" : "Butterscotch",
+      "tile_id" : "butterscotch",
+      "tile_hex" : "#e19640",
+      "tile_number" : "15-1147-TSX"
+    },
+    {
+      "tile_name" : "Grapeade",
+      "tile_id" : "grapeade",
+      "tile_hex" : "#85677b",
+      "tile_number" : "18-3211-TCX"
+    },
+    {
+      "tile_name" : "Rutabaga",
+      "tile_id" : "rutabaga",
+      "tile_hex" : "#ecddbe",
+      "tile_number" : "12-0806-TCX"
+    },
+    {
+      "tile_name" : "Green Olive",
+      "tile_id" : "green-olive",
+      "tile_hex" : "#8d8b55",
+      "tile_number" : "17-0535-TCX"
+    },
+    {
+      "tile_name" : "Evening Blue",
+      "tile_id" : "evening-blue",
+      "tile_hex" : "#2a293e",
+      "tile_number" : "19-3815-TCX"
+    },
+    {
+      "tile_name" : "Frost Gray",
+      "tile_id" : "frost-gray",
+      "tile_hex" : "#848283",
+      "tile_number" : "17-0000-TSX"
+    }
+  ],
 
   "navItems" : [
     {

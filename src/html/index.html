@@ -6,6 +6,7 @@
 {% set body_classes = "index" %}
 {% set main_header_classes = "header-index" %}
 {% set color_season_spring_2019 = "#ff6f61" %}
+{% set color_season_fall_2019 = "#bb4a4d" %}
 {% set color_season_spring_2018 = "#6ea2d5" %}
 {% set color_season_fall_2018 = "#5f4b8b" %}
 {% set color_season_spring_2017 = "#88b04b" %}
@@ -47,6 +48,14 @@
         {% endfor %}
       </ul>
     </div>
+    <div class="tiles-wrap tiles-wrap-fall" style="background-color:{{ color_season_fall_2019 }}">
+       <header class="section-header-season"><h2><a class="toggle-tiles toggle-tiles-inversed" href="#tilesFall2019" style="color:{{ color_season_fall_2019 }}">Fall 2019</a></h2></header>
+       <ul class="tiles tiles-fall" id="tilesFall2019">
+         {% for tile in tiles_2019_fall %}
+           {{ macroTileindex.tileindexMacro(tile.tile_name, tile.tile_hex, tile.tile_id) }}
+         {% endfor %}
+       </ul>
+     </div>
 
     <div class="tiles-wrap tiles-wrap-spring" style="background-color:{{ color_season_spring_2018 }}">
       <header class="section-header-season"><h2><a class="toggle-tiles" href="#tilesSpring2018" style="color:{{ color_season_spring_2018 }}">Spring 2018</a></h2></header>

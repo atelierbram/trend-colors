@@ -4,12 +4,15 @@
   "description": "Colors from Pantone’s biannual fashion color report converted into colorschemes - for designers to play with and customise",
   "main": "gruntfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "update:packages": "node ../../../js/snippets/npm-wipe-package-dependencies.js && rm -rf node_modules && npm update --save-dev && npm update --save"
   },
   "repository": {
     "type": "git",
     "url": "https://atelierbram@github.com/atelierbram/trend-colors.git"
   },
+  "browserslist": [
+    "defaults"
+  ],
   "keywords": [
     "colors",
     "colorschemes",
@@ -21,20 +24,20 @@
   "license": "MIT",
   "homepage": "https://github.com/atelierbram/trend-colors#readme",
   "devDependencies": {
-    "autoprefixer": "^9.1.5",
-    "cssnano": "^4.1.10",
-    "grunt": "^1.0.4",
-    "grunt-contrib-clean": "^1.1.0",
-    "grunt-contrib-concat": "^1.0.1",
-    "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-htmlmin": "^3.1.0",
-    "grunt-contrib-uglify": "^4.0.0",
-    "grunt-contrib-watch": "^1.1.0",
-    "grunt-nunjucks-2-html": "^3.0.0",
-    "grunt-postcss": "^0.9.0",
-    "grunt-sass": "^3.0.1",
-    "load-grunt-tasks": "^3.5.2",
-    "node-sass": "^4.12.0",
-    "time-grunt": "^1.4.0"
+    "autoprefixer": "*",
+    "cssnano": "*",
+    "grunt": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-htmlmin": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-nunjucks-2-html": "^3.1.0",
+    "grunt-postcss": "*",
+    "grunt-sass": "*",
+    "load-grunt-tasks": "*",
+    "node-sass": "*",
+    "time-grunt": "*"
   }
 }

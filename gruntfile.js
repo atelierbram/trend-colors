@@ -23,7 +23,7 @@ module.exports = function(grunt) {
          inline: false, // save all sourcemaps as separate files...
        },
        processors: [
-         require("autoprefixer")({ browsers: "last 2 versions" }),
+         require("autoprefixer")(),
          require('cssnano')()
        ]
      },

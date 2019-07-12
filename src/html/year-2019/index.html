@@ -6,6 +6,7 @@
 {% set body_classes = "year-2019" %}
 {% set main_header_classes = "header-2019" %}
 {% set color_season_spring_2019 = "#ff6f61" %}
+{% set color_season_fall_2019 = "#bb4a4d" %}
 
 {% import "macros/macro-tile.njk" as macroTile %}
 {% import "macros/macro-modal.njk" as macroModal %}
@@ -24,6 +25,15 @@
       <a id="buttonDownloadSpringVars" class="button button-download" href="https://raw.githubusercontent.com/atelierbram/trend-colors/master/docs/assets/sass/schemes/_trendColors_2019-spring.scss">Variables - Spring 2019</a>
     </div>
 
+   <div class="tiles-wrap tiles-wrap-fall" style="background-color:{{ color_season_fall_2019 }}">
+      <a id="buttonDownloadFallVars" class="button button-download" href="https://raw.githubusercontent.com/atelierbram/trend-colors/master/docs/assets/sass/schemes/_trendColors_2019-fall.scss">Variables - Fall 2019</a>
+      <header class="section-header-season"><h2>Fall</h2></header>
+      <ul class="tiles tiles-fall">
+        {% for tile in tiles_2019_fall %}
+        {{ macroTile.tileMacro(tile.tile_name, tile.tile_hex, tile.tile_id) }}
+        {% endfor %}
+      </ul>
+   </div>
 
   </section>
 
@@ -36,6 +46,14 @@
       {% endfor %}
     </ul>
 
+    <h2>Info Fall</h2>
+
+    <ul class="modals modals-fall">
+      {% for modal in tiles_2019_fall %}
+      {{ macroModal.modalMacro(modal.tile_id, modal.tile_name, modal.tile_hex, modal.tile_number) }}
+      {% endfor %}
+    </ul>
+ 
 
   </section>
 
